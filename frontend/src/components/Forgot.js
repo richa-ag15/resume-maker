@@ -26,7 +26,9 @@ const Forgot = (props) => {
             .then(result => {
                 if(result === 'Successfully'){
                     alert('changed')
-                }else("email is not matched")
+                }else{
+                   alert("email is not matched")
+                }
                 
             })
             .catch(error => console.log('error', error));
@@ -61,7 +63,9 @@ const Forgot = (props) => {
                     </form>
                 </Modal.Body>
                 <Modal.Footer>
-                    <Button onClick={() => editPass()}>Close</Button>
+                    <Button  onClick={() => {
+                         editPass()
+                    }}>save</Button>
                 </Modal.Footer>
             </Modal>
         </div>
