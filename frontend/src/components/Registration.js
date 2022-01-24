@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { Component, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 
 function Registration({userData}) {
@@ -9,7 +9,8 @@ function Registration({userData}) {
         lastname: '',
         email: '',
         phone: '',
-        password: ''
+        password: '',
+        cP:''
     })
 
     const handlshow = (e) => {
@@ -23,37 +24,44 @@ function Registration({userData}) {
     }
 
     const sendData = () => {
-        const {firstname, lastname, email, password, phone } = allData
-        var myHeaders = new Headers();
-        myHeaders.append("Content-Type", "application/json");
+        const {firstname, lastname, email, password, phone, cP } = allData
 
-        var raw = JSON.stringify({
-            "name": firstname,
-            "lastname":lastname,
-            "email": email,
-            "passward": password,
-            "phone":phone
-        });
+        if(password === cP ){
 
-        var requestOptions = {
-            method: 'POST',
-            headers: myHeaders,
-            body: raw,
-            redirect: 'follow'
-        };
-
-        fetch("http://localhost:3001/res", requestOptions)
-            .then(response => response.json())
-            .then(result => {
-                if(result === 'Successfully'){
-                    alert('add data')
-                    navigate('/home');
-                    userData(firstname,lastname, email, phone)
-                }else{
-                    alert('not add')
-                }
-            })
-            .catch(error => console.log('error', error));
+            var myHeaders = new Headers();
+            myHeaders.append("Content-Type", "application/json");
+    
+            var raw = JSON.stringify({
+                "name": firstname,
+                "lastname":lastname,
+                "email": email,
+                "passward": password,
+                "phone":phone
+            });
+    
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+    
+            fetch("http://localhost:3001/res", requestOptions)
+                .then(response => response.json())
+                .then(result => {
+                    if(result === 'Successfully'){
+                        alert('add data')
+                        navigate('/home');
+                        userData(firstname,lastname, email, phone)
+                    }else{
+                        alert('not add')
+                    }
+                })
+                .catch(error => console.log('error', error));
+        }
+        else {
+            alert('password not matched')
+        }
     }
 
     return (
@@ -92,7 +100,7 @@ function Registration({userData}) {
                                 </div>
                                 <div className='form-group'>
                                     <label htmlFor='cpassword'><i class="zmdi zmdi-lock material-icons-name"></i></label>
-                                    <input type="password" name="cpassword" id="cphone" placeholder=' Confirm Your password' />
+                                    <input type="password" name="cP" id="cphone" placeholder=' Confirm Your password' onChange={handlshow} />
 
                                 </div>
                                 <button type="button" class="btn btn-primary" onClick={() => sendData()}>registration</button>

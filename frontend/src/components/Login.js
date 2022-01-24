@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { Link , useNavigate } from 'react-router-dom';
-
+import Forgot from "./Forgot"
 const Login = () => {
     const navigate = useNavigate();
     const [email, setemail] = useState("")
     const [passward, setpassward] = useState("")
-
+    const [modalShow, setModalShow] = React.useState(false);
     const handle = () => {
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
@@ -37,7 +37,7 @@ const Login = () => {
 
         < div >
             <section className='login' >
-                <div className='container mt-5' style={{ border: "2px #a6e7ff solid", display: "block", width: '400px', boxShadow: '10px 10px 8px #888888' }}>
+                <div className='container mt-5' style={{ border: "2px #a6e7ff solid", display: "block", width: '800px', boxShadow: '10px 10px 8px #888888' }}>
                     <div className='signup-content' style={{ display: 'flex', alignitem: "center", justifyContent: "center" }}>
                         <div className='signup-form'>
                             <h1 className='form-group' style={{ fontSize: "30px" }}> login </h1>
@@ -54,9 +54,10 @@ const Login = () => {
                                 <div className='form-group'>
                                     <label htmlFor='password'><i class="zmdi zmdi-lock material-icons-name"></i></label>
                                     <input type="password" name="password" id="phone" placeholder='Your password' onChange={(e) => setpassward(e.target.value)} />
-
+                                           
                                 </div>
 
+                                 <p><a  onClick={() => setModalShow(true)}> Forgot Passward? </a></p>
                                 <button type="button" class="btn btn-primary" onClick={handle} >login</button>
                                 <br />
                                 <Link to="/"> <p><a>not have an account</a></p></Link>
@@ -68,6 +69,10 @@ const Login = () => {
                     </div>
                 </div>
             </section>
+            <Forgot
+        show={modalShow}
+        onHide={() => setModalShow(false)}
+      />
         </div >
     )
 }

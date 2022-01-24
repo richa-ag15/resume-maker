@@ -14,7 +14,22 @@ const db = mysql.createConnection({
     user:'root',
     database:'nodejs-login'
 })
+ 
+app.post('/editAd', (req,res)=>{
+    const {passward, email} = req.body;
 
+    db.query(
+        `UPDATE user SET passward='${passward}' WHERE email='${email}'`,
+        (err, result) => {
+            if (err) {
+                res.status(400).json(err);
+            }
+            else {
+                res.status(200).json('Successfully');
+            }
+        }
+    )
+})
 
 app.post('/res', (req, res) => {
     const {name, email, passward, phone} = req.body
