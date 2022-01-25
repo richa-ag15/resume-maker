@@ -86,55 +86,55 @@ function Home({firstname, email, phone}) {
         <Form>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="form.Name">
-              <Form.Label>Name</Form.Label>
+              <div>Name</div>
               <Form.Control type="text" placeholder="Enter name" name='name' value={allData.name} onChange={handlshow} />
             </Form.Group>
             <Form.Group as={Col} controlId="form.Name">
-              <Form.Label>Last Name</Form.Label>
+              <div>Last Name</div>
               <Form.Control type="text" placeholder="Enter lastname" name='lastname' value={allData.lastname} onChange={handlshow} />
             </Form.Group>
           </Row>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="form.Email">
-              <Form.Label>Email address</Form.Label>
+              <div>Email address</div>
               <Form.Control type="email" placeholder="name@example.com" name='email' value={allData.email} onChange={handlshow} />
             </Form.Group>
             <Form.Group as={Col} controlId="form.Name">
-              <Form.Label>Phone Number</Form.Label>
+              <div>Phone Number</div>
               <Form.Control label='Phone number input' id='typePhone' type='tel' name='phone' value={allData.phone} onChange={handlshow} />
             </Form.Group>
           </Row>
           <Form.Group as={Col} controlId="form.Name">
-            <Form.Label>profile</Form.Label>
+            <div>profile</div>
             <Form.Control type="text" placeholder="Enter profile name" name='profile' value={allData.profile} onChange={handlshow} />
           </Form.Group>
           <Form.Group as={Col} controlId="form.Name">
-            <Form.Label>GitHub Link</Form.Label>
+            <div>GitHub Link</div>
             <Form.Control type="text" placeholder="" name='github' value={allData.github} onChange={handlshow} />
           </Form.Group>
           <Form.Group as={Col} controlId="form.Name">
-            <Form.Label>Linkdin Link</Form.Label>
+            <div>Linkdin Link</div>
             <Form.Control type="text" placeholder="" name='linkdin' value={allData.linkdin} onChange={handlshow} />
           </Form.Group>
 
           <Form.Group className="mb-3" controlId="formGridAddress1">
-            <Form.Label>Address</Form.Label>
+            <div>Address</div>
             <Form.Control placeholder="1234 Main St" name='address' value={allData.address} onChange={handlshow} />
           </Form.Group>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>City</Form.Label>
+              <div>City</div>
               <Form.Control name='city' value={allData.city} onChange={handlshow} />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>State</Form.Label>
+              <div>State</div>
               <Form.Control name='state' value={allData.state} onChange={handlshow} />
             </Form.Group>
 
 
             <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Zip</Form.Label>
+              <div>Zip</div>
               <Form.Control name='zip' value={allData.zip} onChange={handlshow} />
             </Form.Group>
           </Row>
@@ -145,73 +145,73 @@ function Home({firstname, email, phone}) {
           <hr style={{ backgroundColor: "#d6b600", width: "100%" }} />
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>Institute/Primary</Form.Label>
+              <div>Institute/Primary</div>
               <Form.Control type="text" placeholder="institute name" name='primary' value={allData.primary} onChange={handlshow} />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>Board</Form.Label>
+              <div>Board</div>
               <Form.Control name='secondary' value={allData.secondary} onChange={handlshow} />
             </Form.Group>
 
 
             <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Percentage</Form.Label>
+              <div>Percentage</div>
               <Form.Control type="text" placeholder="%" name='boardp' value={allData.boardp} onChange={handlshow} />
             </Form.Group>
           </Row>
 
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>Institute/Secondary</Form.Label>
+              <div>Institute/Secondary</div>
               <Form.Control type="text" placeholder="institute name" name='boards' value={allData.boards} onChange={handlshow} />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>Board</Form.Label>
+              <div>Board</div>
               <Form.Control name='percentagep' value={allData.percentagep} onChange={handlshow} />
             </Form.Group>
 
 
             <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Percentage</Form.Label>
+              <div>Percentage</div>
               <Form.Control type="text" placeholder="%" name='percentages' value={allData.percentages} onChange={handlshow} />
             </Form.Group>
           </Row>
 
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>Graduation</Form.Label>
+              <div>Graduation</div>
               <Form.Control type="text" placeholder="institute name" name='graduation' value={allData.graduation} onChange={handlshow} />
             </Form.Group>
 
 
             <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Post Graduation</Form.Label>
+              <div>Post Graduation</div>
               <Form.Control type="text" placeholder="institute name" name='postgraduation' value={allData.postgraduation} onChange={handlshow} />
             </Form.Group>
           </Row>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>Univercity Name</Form.Label>
+              <div>Univercity Name</div>
               <Form.Control type="text" placeholder="name" name='univercity' value={allData.univercity} onChange={handlshow} />
             </Form.Group>
 
 
             <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Univercity Name</Form.Label>
+              <div>Univercity Name</div>
               <Form.Control type="text" placeholder="name" name='postunivercity' value={allData.postunivercity} onChange={handlshow} />
             </Form.Group>
           </Row>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label>Percentage In Graduation</Form.Label>
+              <div>Percentage In Graduation</div>
               <Form.Control type="text" placeholder="%" name='graduationp' value={allData.graduationp} onChange={handlshow} />
             </Form.Group>
 
 
             <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label>Percentage In Post Graduation</Form.Label>
+              <div>Percentage In Post Graduation</div>
               <Form.Control type="text" placeholder="%" name='postgraduationp' value={allData.postgraduationp} onChange={handlshow} />
             </Form.Group>
           </Row>
@@ -222,36 +222,36 @@ function Home({firstname, email, phone}) {
           <hr style={{ backgroundColor: "#d6b600", width: "100%" }} />
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label></Form.Label>
+              <div></div>
               <Form.Control type="text" placeholder="1." name='skill1' value={allData.skill1} onChange={handlshow} />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label></Form.Label>
+              <div></div>
               <Form.Control type="text" placeholder="2." name='skill2' value={allData.skill2} onChange={handlshow} />
             </Form.Group>
 
 
             <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label></Form.Label>
+              <div></div>
               <Form.Control type="text" placeholder="3." name='skill3' value={allData.skill3} onChange={handlshow} />
             </Form.Group>
 
           </Row>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label></Form.Label>
+              <div></div>
               <Form.Control type="text" placeholder="4." name='skill4' value={allData.skill4} onChange={handlshow} />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label></Form.Label>
+              <div></div>
               <Form.Control type="text" placeholder="5." name='skill5' value={allData.skill5} onChange={handlshow} />
             </Form.Group>
 
 
             <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label></Form.Label>
+              <div></div>
               <Form.Control type="text" placeholder="6." name='skill6' value={allData.skill6} onChange={handlshow} />
             </Form.Group>
 
@@ -292,7 +292,7 @@ function Home({firstname, email, phone}) {
           <hr style={{ backgroundColor: "#d6b600", width: "100%" }} />
 
           <Form.Group controlId="form.Textarea">
-            <Form.Label></Form.Label>
+            
             <Form.Control as="textarea" rows={3} name='awards' value={allData.awards} onChange={handlshow} />
           </Form.Group>
 
@@ -301,30 +301,30 @@ function Home({firstname, email, phone}) {
           <hr style={{ backgroundColor: "#d6b600", width: "100%" }} />
           <Row className="mb-3">
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label></Form.Label>
+              
               <Form.Control type="text" placeholder="1." name='hobbie1' value={allData.hobbie1} onChange={handlshow} />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label></Form.Label>
+              
               <Form.Control type="text" placeholder="2." name='hobbie2' value={allData.hobbie2} onChange={handlshow} />
             </Form.Group>
 
 
             <Form.Group as={Col} controlId="formGridZip">
-              <Form.Label></Form.Label>
+              
               <Form.Control type="text" placeholder="3." name='hobbie3' value={allData.hobbie3} onChange={handlshow} />
             </Form.Group>
 
 
 
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label></Form.Label>
+              
               <Form.Control type="text" placeholder="4." name='hobbie4' value={allData.hobbie4} onChange={handlshow} />
             </Form.Group>
 
             <Form.Group as={Col} controlId="formGridCity">
-              <Form.Label></Form.Label>
+             
               <Form.Control type="text" placeholder="5." name='hobbie5' value={allData.hobbie5} onChange={handlshow} />
             </Form.Group>
 

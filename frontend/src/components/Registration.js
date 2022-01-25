@@ -50,11 +50,11 @@ function Registration({userData}) {
                 .then(response => response.json())
                 .then(result => {
                     if(result === 'Successfully'){
-                        alert('add data')
+                        alert('save data?')
                         navigate('/home');
                         userData(firstname,lastname, email, phone)
                     }else{
-                        alert('not add')
+                        alert('Enter valid details')
                     }
                 })
                 .catch(error => console.log('error', error));
@@ -75,32 +75,32 @@ function Registration({userData}) {
 
                                 <div className='form-group'>
                                     <label htmlFor='name'><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="name" name="firstname" value={allData.firstname} id="firstname" placeholder='Your Name' onChange={handlshow} />
+                                    <input type="name" name="firstname" value={allData.firstname} id="firstname" placeholder='Your Name' onChange={handlshow} required />
 
                                 </div>
                                 <div className='form-group'>
                                     <label htmlFor='name'><i class="zmdi zmdi-account material-icons-name"></i></label>
-                                    <input type="name" name="lastname" value={allData.lastname} id="lastname" placeholder='Your Last Name' onChange={handlshow} />
+                                    <input type="name" name="lastname" value={allData.lastname} id="lastname" placeholder='Your Last Name' onChange={handlshow} required />
 
                                 </div>
                                 <div className='form-group'>
                                     <label htmlFor='email'><i class="zmdi zmdi-email material-icons-name"></i></label>
-                                    <input type="email" name="email" value={allData.email} id="email" placeholder='Your Email' onChange={handlshow} />
+                                    <input type="email" name="email" value={allData.email} id="email" placeholder='Your Email' onChange={handlshow} required />
 
                                 </div>
                                 <div className='form-group'>
                                     <label htmlFor='phone'><i class="zmdi zmdi-phone-in-talk material-icons-name"></i></label>
-                                    <input type="phone" name="phone" value={allData.phone} id="phone" placeholder='Your Phone' onChange={handlshow} />
+                                    <input type="phone" name="phone" value={allData.phone} id="phone" placeholder='Your Phone' onChange={handlshow} required/>
 
                                 </div>
                                 <div className='form-group'>
                                     <label htmlFor='password'><i class="zmdi zmdi-lock material-icons-name"></i></label>
-                                    <input type="password" name="password" value={allData.password} id="phone" placeholder='Your password' onChange={handlshow} />
+                                    <input type="password" name="password" value={allData.password} id="phone" placeholder='Your password' onChange={handlshow} required />
 
                                 </div>
                                 <div className='form-group'>
                                     <label htmlFor='cpassword'><i class="zmdi zmdi-lock material-icons-name"></i></label>
-                                    <input type="password" name="cP" id="cphone" placeholder=' Confirm Your password' onChange={handlshow} />
+                                    <input type="password" name="cP" id="cphone" placeholder=' Confirm Your password' onChange={handlshow} required />
 
                                 </div>
                                 <button type="button" class="btn btn-primary" onClick={() => sendData()}>registration</button>
